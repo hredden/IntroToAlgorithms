@@ -11,34 +11,20 @@ package introtoalgorithms;
  * @author Max
  */
 
-import Sorting.*;
+import Test.*;
 import java.util.*;
 
 public class IntroToAlgorithms {
-    private static int size = 50;
-    private static int max = 1000;
     
     public static void main(String[] args) {
         
-        //Create array of random numbers
-       Random random = new Random();
-        int[] intArray = new int[size];
-        for(int i = 0; i<size; i++)
-           intArray[i] = random.nextInt(max);
+        IntArrayInsertionTest test = new IntArrayInsertionTest();
+        test.test();
+        
+        GenericInsertionTest genTest = new GenericInsertionTest();
+        genTest.test();
         
         
-        //Test insertion sort
-        System.out.println("Array before sorting: ");
-        for(int i = 0; i < size; i++)
-            System.out.print(intArray[i] + " ");
-        
-        System.out.println();
-        System.out.println("Array after sorting: ");
-        InsertionSort.sort(intArray);
-        for(int i = 0; i < size; i++)
-            System.out.print(intArray[i] + " ");
-        
-        
-    }
+    }//end main
     
-}
+}//end class
